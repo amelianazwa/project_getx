@@ -1,5 +1,8 @@
+import 'package:belajar_getx/app/modules/biodata/views/ouput_view.dart';
 import 'package:get/get.dart';
 
+import '../modules/biodata/bindings/biodata_binding.dart';
+import '../modules/biodata/views/biodata_view.dart';
 import '../modules/counter/bindings/counter_binding.dart';
 import '../modules/counter/views/counter_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -15,7 +18,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => const HomeView(),
+      page: () => HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
@@ -23,5 +26,15 @@ class AppPages {
       page: () => CounterView(),
       binding: CounterBinding(),
     ),
-  ];
+    GetPage(
+      name: _Paths.BIODATA,
+      page: () => BiodataView(),
+      binding: BiodataBinding(),
+    ),
+    GetPage(
+      name: _Paths.OUTPUT,
+      page: () => OutputView(),
+      binding: BiodataBinding(),
+),
+];
 }
